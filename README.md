@@ -2,15 +2,21 @@
 
 ### Overview
 
-* Figma
-* Images
+A responsive gallery.
 
-**Figma**
+The fourth project of the ***Practicum by Yandex*** Web Development course.
 
-* [Link to the project in Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+Designed to be displayed correctly on web and mobile.
 
-**Images**
+[See the live Github page here]()
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
+[Link to the project on Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
 
-Have fun with JavaScript!
+## Technologies and Techniques
+- JavaScript
+- CSS3
+- HTML5
+- BEM file structure
+
+## Next Steps
+- 
