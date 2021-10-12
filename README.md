@@ -4,7 +4,7 @@
 
 A responsive gallery.
 
-The fourth project of the ***Practicum by Yandex*** Web Development course.
+The fourth project of the [***Practicum by Yandex***](https://practicum.yandex.com/) Web Development course.
 
 Designed to be displayed correctly on web and mobile.
 
