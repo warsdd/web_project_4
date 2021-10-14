@@ -1,0 +1,8 @@
+.elements__button {
+  max-width: 21px;
+  min-height: 19px;
+  width: 100%;
+  background-image: url(../../../images/heart.svg);
+  background-color: #FFFFFF;
+  border: none;
+}

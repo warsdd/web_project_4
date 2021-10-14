@@ -1,0 +1,14 @@
+.profile__title {
+  max-width: 415px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+      "name button"
+      "description description";
+  row-gap: 16px;
+  column-gap: 18px;
+  justify-items: start;
+  align-content: center;
+}
