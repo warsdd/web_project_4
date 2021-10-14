@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Around the U.S.</title>
-    <link rel="stylesheet" href="./pages/index.css"/>
+    <link rel="stylesheet" href="./pages/index.css" />
 </head>
 
 <body class="page">
@@ -13,7 +13,7 @@
     <div class="modal">
 
         <header class="header">
-            <img src="./images/logo.svg" alt="logo" class="header__logo"/>
+            <img src="./images/logo.svg" alt="Around the U.S. stylised logo" class="header__logo" />
         </header>
 
 
@@ -24,7 +24,8 @@
                     <img src="./images/cousteau.png" alt="Profile picture" class="profile__image" />
                     <div class="profile__title">
                         <h1 class="profile__name">Jacques Cousteau</h1>
-                        <button type="button" class="button profile__edit-button link"><img src="images/edit.svg" alt="pen logo, meant to indicate this section can be edited"></button>
+                        <button type="button" class="button profile__edit-button link"><img src="images/edit.svg"
+                                alt="pen logo, meant to indicate this section can be edited"></button>
                         <p class="profile__description">Explorer</p>
                     </div>
                 </div>
@@ -78,19 +79,6 @@
                     </li>
                 </ul>
             </section>
-
-
-            <section class="popup">
-                <div class="popup__body">
-                    <form class="popup__form" name="profile">
-                        <button type="button" class="button popup__close link"></button>
-                        <h2 class="popup__title">Edit profile</h2>
-                        <input type="text" name="name" id="name" class="popup__input" />
-                        <input type="text" name="occupation" id="occupation" class="popup__input" />
-                        <button type="submit" class="button popup__save">Save</button>
-                    </form>
-                </div>
-            </section>
         </main>
 
 
@@ -98,10 +86,24 @@
             <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
         </footer>
 
+
+        <section class="popup">
+            <div class="popup__body">
+                <form class="popup__form" name="profile">
+                    <button type="button" class="button popup__close-button"></button>
+                    <h2 class="popup__title">Edit profile</h2>
+                    <input type="text" name="name" id="name" class="popup__input popup__input_name" value="Jacques Cousteau"/>
+                    <input type="text" name="occupation" id="occupation" class="popup__input popup__input_occupation" value="Explorer"/>
+                    <button type="submit" class="button popup__save-button">Save</button>
+                </form>
+            </div>
+        </section>
+
     </div>
 
 
-    <script src="main.js"></script>
+    <script src="script.js"></script>
+
 </body>
 
 </html>
