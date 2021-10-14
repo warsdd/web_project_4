@@ -6,3 +6,10 @@
     border-radius: 2px;
     place-self: center flex-end;
   }
+
+  @media screen and (max-width: 880px) {
+    .profile__add-button {
+      width: 282px;
+      margin-top: 36px;
+    }
+  }

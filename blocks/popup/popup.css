@@ -6,3 +6,10 @@
   border-radius: 10px;
   margin: auto;
 }
+
+@media screen and (max-width: 880px) {
+  .popup {
+    max-width: 282px;
+    height: 322px;
+  }
+}

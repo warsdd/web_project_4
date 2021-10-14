@@ -3,3 +3,10 @@
   margin-right: 36px;
   position: relative;
 }
+
+@media screen and (max-width: 880px) {
+  .popup__body {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+}

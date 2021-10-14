@@ -1,4 +1,4 @@
-.profile__title {
+.profile__grid {
   max-width: 415px;
   width: 100%;
   display: grid;
@@ -11,4 +11,13 @@
   column-gap: 18px;
   justify-items: start;
   align-content: center;
+}
+
+@media screen and (max-width: 880px) {
+  .profile__grid {
+    max-width: 282px;
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
 }
