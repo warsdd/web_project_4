@@ -3,8 +3,12 @@
   height: 330px;
   background-color: #FFFFFF;
   color: #000000;
+  display: none;
+  position: fixed;
+  align-items: center;
   border-radius: 10px;
   margin: auto;
+  z-index: 1;
 }
 
 @media screen and (max-width: 880px) {

@@ -1,11 +1,11 @@
-.popup__body {
+.popup__container {
   margin-left: 36px;
   margin-right: 36px;
   position: relative;
 }
 
 @media screen and (max-width: 880px) {
-  .popup__body {
+  .popup__container {
     margin-left: 22px;
     margin-right: 22px;
   }
