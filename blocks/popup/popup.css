@@ -1,19 +1,17 @@
 .popup {
   max-width: 430px;
-  height: 330px;
-  background-color: #FFFFFF;
+  background-color: #fff;
   color: #000000;
-  display: none;
   position: fixed;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 10px;
-  margin: auto;
   z-index: 1;
 }
 
 @media screen and (max-width: 880px) {
   .popup {
     max-width: 282px;
-    height: 322px;
   }
 }
