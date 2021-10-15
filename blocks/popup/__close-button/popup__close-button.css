@@ -14,7 +14,10 @@
 
 @media screen and (max-width: 880px) {
   .popup__close-button {
-    right: -20px;
+    width: 26px;
+    height: 26px;
+    top: -50px;
+    right: -10px;
   }
 }
 /*here need to push button away from main body of popup by 13.62px, but not working, why?*/
