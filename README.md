@@ -17,6 +17,7 @@ Designed to be displayed correctly on web and mobile.
 - CSS3
 - HTML5
 - BEM file structure
+- Modal popup form
 
 ## Next Steps
-- 
+- Corrections and fixes
