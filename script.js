@@ -1,6 +1,6 @@
 let editFormEl = document.querySelector(".popup__form");
 
-let modalEl = document.querySelector(".popup");
+let popupEl = document.querySelector(".popup");
 
 let editButton = document.querySelector(".profile__edit-button");
 
@@ -15,13 +15,13 @@ let occupation = document.querySelector(".profile__description");
 console.log(editButton);
 
 function handleFormOpen() {
-  modalEl.classList.remove("popup_closed");
+  popupEl.classList.remove("popup_closed");
   nameInput.value = name.textContent;
   occupationInput.value = occupation.textContent;
 }
 
 function handleFormClose() {
-  modalEl.classList.add("popup_closed");
+  popupEl.classList.add("popup_closed");
 }
 
 function handleFormSubmit(evt) {
