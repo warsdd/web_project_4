@@ -15,13 +15,13 @@ let occupation = document.querySelector(".profile__description");
 console.log(editButton);
 
 function handleFormOpen() {
-  popupEl.classList.remove("popup_closed");
+  popupEl.classList.add("popup_opened");
   nameInput.value = name.textContent;
   occupationInput.value = occupation.textContent;
 }
 
 function handleFormClose() {
-  popupEl.classList.add("popup_closed");
+  popupEl.classList.remove("popup_opened");
 }
 
 function handleFormSubmit(evt) {
