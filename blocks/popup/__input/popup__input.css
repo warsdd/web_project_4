@@ -11,6 +11,10 @@
   padding-bottom: 13.26px;
 }
 
+.popup__input:first-of-type{
+  margin-bottom: 29.74px;
+}
+
 @media screen and (max-width: 880px) {
   .popup__input {
     max-width: 234px;
