@@ -2,7 +2,7 @@
 
 ### Overview
 
-A responsive gallery.
+A interactive and responsive gallery.
 
 The fourth project of the [***Practicum by Yandex***](https://practicum.yandex.com/) Web Development course.
 
