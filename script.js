@@ -12,8 +12,6 @@ let occupationInput = document.querySelector("#occupation");
 let name = document.querySelector(".popup__input_name");
 let occupation = document.querySelector(".profile__description");
 
-console.log(editButton);
-
 function handleFormOpen() {
   popupEl.classList.add("popup_opened");
   nameInput.value = name.textContent;
