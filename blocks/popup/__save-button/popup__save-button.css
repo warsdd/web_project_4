@@ -6,9 +6,7 @@
   line-height: 21.78px;
   background-color: #000;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   border: none;
   border-radius: 2px;
   margin: auto;
