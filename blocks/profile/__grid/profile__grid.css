@@ -17,7 +17,7 @@
   .profile__grid {
     max-width: 282px;
     justify-content: center;
-    row-gap: 10px;
+    row-gap: 14px;
     column-gap: 10px;
   }
 }
