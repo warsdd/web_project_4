@@ -9,7 +9,7 @@ let closeButton = document.querySelector(".popup__close-button");
 let nameInput = document.querySelector("#name");
 let occupationInput = document.querySelector("#occupation");
 
-let name = document.querySelector(".popup__input_name");
+let name = document.querySelector(".profile__name");
 let occupation = document.querySelector(".profile__description");
 
 function handleFormOpen() {
