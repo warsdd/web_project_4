@@ -6,5 +6,6 @@
   .header__logo {
     width: 126px;
     margin-bottom: 32px;
+    padding-left: 27px;
   }
 }

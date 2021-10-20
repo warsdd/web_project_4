@@ -7,7 +7,6 @@
 
 @media screen and (max-width: 880px) {
   .page {
-    max-width: 282px;
     margin: auto;
   }  
 }
