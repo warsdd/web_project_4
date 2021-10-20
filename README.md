@@ -8,7 +8,7 @@ The fourth project of the [***Practicum by Yandex***](https://practicum.yandex.c
 
 Designed to be displayed correctly on web (880px and above) and mobile/smaller devices (880px and below).
 
-[See the live Github page here](https://warsdd.github.io/web_project__4/)
+[See the live Github page here](https://warsdd.github.io/web_project_4/)
 
 [Link to the project on Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
 
