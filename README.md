@@ -1,10 +1,10 @@
-# Project 4: Around The U.S.
+# Around The U.S.
 
 ### Overview
 
-A interactive and responsive gallery.
+A interactive and responsive social media style gallery.
 
-The fourth project of the [***Practicum by Yandex***](https://practicum.yandex.com/) Web Development course.
+A project completed as part of the [***Practicum by Yandex***](https://practicum.yandex.com/) Web Development course.
 
 Designed to be displayed correctly on web (880px and above) and mobile/smaller devices (880px and below).
 
@@ -17,7 +17,7 @@ Designed to be displayed correctly on web (880px and above) and mobile/smaller d
 - CSS3
 - HTML5
 - BEM file structure
-- Modal popup form
+- Modal popup forms and images
 
 ## Next Steps
 - Corrections and fixes
