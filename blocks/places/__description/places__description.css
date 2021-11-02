@@ -1,0 +1,8 @@
+.places__description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding-left: 21px;
+  padding-right: 15px; 
+}

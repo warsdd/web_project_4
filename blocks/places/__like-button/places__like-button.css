@@ -1,0 +1,18 @@
+.places__like-button {
+  max-width: 21px;
+  min-height: 19px;
+  width: 100%;
+  background-image: url(../../../images/heart.svg);
+  background-color: #FFFFFF;
+  border: none;
+}
+
+.places__like-button:hover {
+  opacity: 0.5;
+}
+
+.places__like-button:active,
+.liked {
+  background-image: url(../../../images/heart-filled.svg);
+  opacity: 1;
+}
