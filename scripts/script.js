@@ -1,10 +1,10 @@
 // wrappers
   // edit button
-const editPopupEl = document.querySelector(".popup__type_edit-profile");
+const editPopupEl = document.querySelector(".popup__type_edit_profile");
 const editFormEl = editPopupEl.querySelector("#edit_profile_form");
 
   // add button
-const addCardModalWindow = document.querySelector(".popup__type_add-card");
+const addCardModalWindow = document.querySelector(".popup__type_add_card");
 const addCardForm = document.querySelector("#create_card_form");
 
 // buttons and other DOM elements
@@ -14,7 +14,7 @@ const closeButton = document.querySelector(".popup__close-button");
 
   // add card
 const cardTemplate = document.querySelector("#card-template");
-const addCardButton = document.querySelector(".places__add-button");
+const addCardButton = document.querySelector(".profile__add-button");
 const closeAddCardModal = document.querySelector("#create_card__close_button");
 
 const nameInput = document.querySelector("#name");

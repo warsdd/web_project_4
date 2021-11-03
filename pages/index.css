@@ -28,7 +28,6 @@
 @import url(../blocks/places/places.css);
 @import url(../blocks/places/__grid/places__grid.css);
 @import url(../blocks/places/__item/places__item.css);
-@import url(../blocks/places/__add-button/places__add-button.css);
 @import url(../blocks/places/__delete-button/places__delete-button.css);
 @import url(../blocks/places/__like-button/places__like-button.css);
 @import url(../blocks/places/__image/places__image.css);
