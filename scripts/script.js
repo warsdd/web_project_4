@@ -7,11 +7,12 @@ const editFormEl = editPopupEl.querySelector("#edit_profile_form");
 const addCardModalWindow = document.querySelector(".popup__type_add-card");
 const addCardForm = document.querySelector("#create_card_form");
 
-
 // buttons and other DOM elements
+  //edit button
 const editButton = document.querySelector(".profile__edit-button");
 const closeButton = document.querySelector(".popup__close-button");
 
+  // add card
 const cardTemplate = document.querySelector("#card-template");
 const addCardButton = document.querySelector(".places__add-button");
 const closeAddCardModal = document.querySelector("#create_card__close_button");
@@ -25,7 +26,11 @@ const imageLinkInput = document.querySelector("#image-link");
 const name = document.querySelector(".profile__name");
 const occupation = document.querySelector(".profile__description");
 
+
+// image preview
 const imagePopup = document.querySelector("#image-popup");
+const imagePopupClose = document.querySelector("#img__close_button");
+//this is working
 
 
 // form data, edit button
@@ -72,8 +77,13 @@ function handleCardModalSubmit(evt) {
   handleCardModalClose();
 }
 
-function openEditModal() {
+// open image preview
+function handleShowImagePopup() {
+  imagePopup.classList.add("popup_opened");
+}
 
+function handleHideImagePopup() {
+  imagePopup.classList.remove("popup_opened");
 }
 
 // event listeners
@@ -87,25 +97,19 @@ addCardButton.addEventListener("click", handleCardModalOpen);
 closeAddCardModal.addEventListener("click", handleCardModalClose);
 addCardForm.addEventListener("submit", handleCardModalSubmit);
 
-// addCardButton.addEventListener("click", () => toggleModalWindow(addCardModalWindow));
-
+// image preview
+imagePopupClose.addEventListener("click", handleHideImagePopup);
 
 // card functions
-function handleLikeIcon() {
-
-}
-
-function handlePreviewPicture() {
-
-}
 
 function createCard(data) {
 
   // create card items
   const card = cardTemplate.content.cloneNode(true).querySelector(".places__item");
   let cardImage = card.querySelector(".places__image");
-  cardImage.style.backgroundImage =    `url('${data.link}')`;
+  cardImage.style.backgroundImage = `url('${data.link}')`;
   card.querySelector(".places__title").textContent = data.name;
+
 
   // adding event listeners
   card.querySelector(".places__delete-button").addEventListener("click", () => {card.remove()});
@@ -116,9 +120,10 @@ function createCard(data) {
   });
 
   cardImage.addEventListener("click", () => {
+
     // selecting element that will hold an image
-    imagePopup.querySelector("image").style.backgroundImage= // set url to the card's link
-    imagePopup.querySelector("title").textContent= // set url to the card's title
+    imagePopup.querySelector("#image-popup_img").style.backgroundImage= `url('${data.link}')`;
+    imagePopup.querySelector("#caption").textContent= data.name;
     handleShowImagePopup()
   })
 
@@ -126,6 +131,7 @@ function createCard(data) {
   return card;
 }
 
+// rendering the card
 function renderCard(data, node) {
   // get card
   const card = createCard(data);
