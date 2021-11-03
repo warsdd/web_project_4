@@ -1,6 +1,7 @@
-.elements__item {
+.places__item {
   list-style: none;
   background-color: #FFFFFF;
   color: #000000;
   border-radius: 10px;
+  position: relative;
 }

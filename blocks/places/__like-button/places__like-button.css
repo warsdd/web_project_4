@@ -1,4 +1,4 @@
-.elements__button {
+.places__like-button {
   max-width: 21px;
   min-height: 19px;
   width: 100%;
@@ -7,11 +7,12 @@
   border: none;
 }
 
-.elements__button:hover {
+.places__like-button:hover {
   opacity: 0.5;
 }
 
-.elements__button:active {
+.places__like-button:active,
+.liked {
   background-image: url(../../../images/heart-filled.svg);
   opacity: 1;
 }
