@@ -1,10 +1,10 @@
 // wrappers
   // edit button
-const editPopupEl = document.querySelector(".popup__type_edit_profile");
+const editPopupEl = document.querySelector(".popup_edit_profile ");
 const editFormEl = editPopupEl.querySelector("#edit_profile_form");
 
   // add button
-const addCardModalWindow = document.querySelector(".popup__type_add_card");
+const addCardModalWindow = document.querySelector(".popup_add_card");
 const addCardForm = document.querySelector("#create_card_form");
 
 // buttons and other DOM elements
