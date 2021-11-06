@@ -15,12 +15,12 @@ const addCardForm = document.querySelector("#create_card_form");
 // buttons and other DOM elements
   //edit button
 const editButton = document.querySelector(".profile__edit-button");
-const closeButton = document.querySelector(".popup__close-button");
+const editFormCloseButton = editPopupEl.querySelector(".popup__close-button");
 
   // add card
 const cardTemplate = document.querySelector("#card-template");
 const addCardButton = document.querySelector(".profile__add-button");
-const closeAddCardModal = document.querySelector("#create_card__close_button");
+const closeAddCardModal = addCardModalWindow.querySelector("#create_card__close_button");
 
 const nameInput = editFormEl.querySelector("#name");
 const occupationInput = editFormEl.querySelector("#occupation");
@@ -31,7 +31,6 @@ const imageLinkInput = addCardForm.querySelector("#image-link");
 
 const name = document.querySelector(".profile__name");
 const occupation = document.querySelector(".profile__description");
-
 
 // image preview
 const imagePopup = document.querySelector("#image-popup");
@@ -47,11 +46,20 @@ function handleModalClose(node) {
   node.classList.remove("popup_opened");
 }
 
+// form data, edit button
+function handleEditFormOpen() {
+  handleModalOpen(editPopupEl);
+
+  nameInput.value = name.textContent;
+  occupationInput.value = occupation.textContent;
+}
+
+
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
 
-  nameInputValue = nameInput.value;
-  occupationInputValue = occupationInput.value;
+  const nameInputValue = nameInput.value;
+  const occupationInputValue = occupationInput.value;
 
   name.textContent = nameInputValue;
   occupation.textContent = occupationInputValue;
@@ -62,7 +70,7 @@ function handleEditFormSubmit(evt) {
 function handleCardModalSubmit(evt) {
   evt.preventDefault();
 
-  data = {
+  const data = {
     name: imageTitleInput.value,
     link: imageLinkInput.value
   }
@@ -141,4 +149,4 @@ function renderCard(data, node) {
 
 initialCards.forEach(place => {
   renderCard(place, ".places__grid");
-})
+});
