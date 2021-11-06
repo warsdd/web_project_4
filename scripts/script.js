@@ -1,8 +1,7 @@
 // wrappers
 
 // cards container
-const card = document.querySelector("#card-template");
-//is this the correct class?
+const cardsContainer = document.querySelector(".places__grid");
 
   // edit form
 const editPopupEl = document.querySelector(".popup_edit_profile");
@@ -74,8 +73,9 @@ function handleCardModalSubmit(evt) {
     name: imageTitleInput.value,
     link: imageLinkInput.value
   }
+
   const card = createCard(data);
-  document.querySelector(".places__grid").prepend(card);
+  cardsContainer.prepend(card);
 
   handleModalClose(addCardModalWindow);
 }
@@ -140,11 +140,11 @@ function createCard(data) {
 }
 
 // rendering the card
-function renderCard(data, node) {
+function renderCard(data) {
   // get card
   const card = createCard(data);
   // render card
-  document.querySelector(node).append(card);
+  cardsContainer.append(card);
 }
 
 initialCards.forEach(place => {
