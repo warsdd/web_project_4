@@ -1,9 +1,14 @@
 // wrappers
-  // edit button
-const editPopupEl = document.querySelector(".popup_edit_profile ");
+
+// cards container
+const card = document.querySelector("#card-template");
+//is this the correct class?
+
+  // edit form
+const editPopupEl = document.querySelector(".popup_edit_profile");
 const editFormEl = editPopupEl.querySelector("#edit_profile_form");
 
-  // add button
+  // add cards
 const addCardModalWindow = document.querySelector(".popup_add_card");
 const addCardForm = document.querySelector("#create_card_form");
 
@@ -17,11 +22,12 @@ const cardTemplate = document.querySelector("#card-template");
 const addCardButton = document.querySelector(".profile__add-button");
 const closeAddCardModal = document.querySelector("#create_card__close_button");
 
-const nameInput = document.querySelector("#name");
-const occupationInput = document.querySelector("#occupation");
+const nameInput = editFormEl.querySelector("#name");
+const occupationInput = editFormEl.querySelector("#occupation");
 
-const imageTitleInput = document.querySelector("#title");
-const imageLinkInput = document.querySelector("#image-link");
+const imageTitleInput = addCardForm.querySelector("#title");
+const imageLinkInput = addCardForm.querySelector("#image-link");
+// the above should be queried as addCardForm but this returns null, investigate
 
 const name = document.querySelector(".profile__name");
 const occupation = document.querySelector(".profile__description");
@@ -29,22 +35,19 @@ const occupation = document.querySelector(".profile__description");
 
 // image preview
 const imagePopup = document.querySelector("#image-popup");
-const imagePopupClose = document.querySelector("#img__close_button");
-//this is working
+const imagePopupClose = imagePopup.querySelector("#img__close_button");
 
 
-// form data, edit button
-function handleFormOpen() {
-  editPopupEl.classList.add("popup_opened");
-  nameInput.value = name.textContent;
-  occupationInput.value = occupation.textContent;
+// open image preview
+function handleModalOpen(node) {
+  node.classList.add("popup_opened");
 }
 
-function handleFormClose() {
-  editPopupEl.classList.remove("popup_opened");
+function handleModalClose(node) {
+  node.classList.remove("popup_opened");
 }
 
-function handleFormSubmit(evt) {
+function handleEditFormSubmit(evt) {
   evt.preventDefault();
 
   nameInputValue = nameInput.value;
@@ -53,16 +56,7 @@ function handleFormSubmit(evt) {
   name.textContent = nameInputValue;
   occupation.textContent = occupationInputValue;
 
-  handleFormClose();
-}
-
-// create new card button
-function handleCardModalOpen() {
-  addCardModalWindow.classList.add("popup_opened");
-}
-
-function handleCardModalClose() {
-  addCardModalWindow.classList.remove("popup_opened");
+  handleModalClose(editPopupEl);
 }
 
 function handleCardModalSubmit(evt) {
@@ -74,34 +68,40 @@ function handleCardModalSubmit(evt) {
   }
   const card = createCard(data);
   document.querySelector(".places__grid").prepend(card);
-  handleCardModalClose();
-}
 
-// open image preview
-function handleShowImagePopup() {
-  imagePopup.classList.add("popup_opened");
-}
-
-function handleHideImagePopup() {
-  imagePopup.classList.remove("popup_opened");
+  handleModalClose(addCardModalWindow);
 }
 
 // event listeners
   // edit button
-editButton.addEventListener("click", handleFormOpen);
-closeButton.addEventListener("click", handleFormClose); 
-editFormEl.addEventListener("submit", handleFormSubmit);
+editButton.addEventListener("click", handleEditFormOpen);
+
+// using a closure to have access to the node which is outside of `this` scope.
+editFormCloseButton.addEventListener("click", function(){
+  handleModalClose(editPopupEl);
+});
+
+editFormEl.addEventListener("submit", handleEditFormSubmit);
 
 // add button
-addCardButton.addEventListener("click", handleCardModalOpen);
-closeAddCardModal.addEventListener("click", handleCardModalClose);
+addCardButton.addEventListener("click", function(){
+  handleModalOpen(addCardModalWindow);
+});
+
+closeAddCardModal.addEventListener("click", function(){
+  handleModalClose(addCardModalWindow);
+});
+
 addCardForm.addEventListener("submit", handleCardModalSubmit);
 
 // image preview
-imagePopupClose.addEventListener("click", handleHideImagePopup);
+imagePopupClose.addEventListener("click", function() {
+  handleModalClose(imagePopup);
+});
+
+
 
 // card functions
-
 function createCard(data) {
 
   // create card items
@@ -124,7 +124,7 @@ function createCard(data) {
     // selecting element that will hold an image
     imagePopup.querySelector("#image-popup_img").style.backgroundImage= `url('${data.link}')`;
     imagePopup.querySelector("#caption").textContent= data.name;
-    handleShowImagePopup()
+    handleModalOpen(imagePopup);
   })
 
   // return the created card

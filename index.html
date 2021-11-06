@@ -1,128 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Around the U.S.</title>
-    <link rel="stylesheet" href="./pages/index.css"/>
-</head>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
 
-<body class="page">
-<header class="header">
-    <img
-            src="./images/logo.svg"
-            alt="Around the U.S. stylised logo"
-            class="header__logo"
-    />
-</header>
+  <body class="page">
+    <header class="header">
+      <img
+        src="./images/logo.svg"
+        alt="Around the U.S. stylised logo"
+        class="header__logo"
+      />
+    </header>
 
-<main>
-    <!-- profile section here, including picture of photographer, name, and title -->
-    <section class="profile">
+    <main>
+      <!-- profile section here, including picture of photographer, name, and title -->
+      <section class="profile">
         <div class="profile__section">
-            <img
-                    src="./images/cousteau.png"
-                    alt="Profile picture"
-                    class="profile__image"
-            />
-            <div class="profile__grid">
-                <h1 class="profile__name">Jacques Cousteau</h1>
-                <button type="button" class="button profile__edit-button"></button>
-                <p class="profile__description">Explorer</p>
-            </div>
+          <img
+            src="./images/cousteau.png"
+            alt="Profile picture"
+            class="profile__image"
+          />
+          <div class="profile__grid">
+            <h1 class="profile__name">Jacques Cousteau</h1>
+            <button type="button" class="button profile__edit-button"></button>
+            <p class="profile__description">Explorer</p>
+          </div>
         </div>
         <button type="button" class="button profile__add-button"></button>
-    </section>
+      </section>
 
-    <!-- image gallery here, grid of images with place names -->
-    <section class="places">
+      <!-- image gallery here, grid of images with place names -->
+      <section class="places">
         <ul class="places__grid"></ul>
-    </section>
-</main>
+      </section>
+    </main>
 
-<footer class="footer">
-    <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
-</footer>
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
+    </footer>
 
-<!-- modal popup, edit form for profile name and title -->
-<div class="popup popup_edit_profile ">
-    <div class="popup__container">
-        <form action="#" class="popup__form" id="edit_profile_form" name="profile">
-            <button type="button" class="button popup__close-button"></button>
-            <h2 class="popup__title">Edit profile</h2>
-            <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    class="popup__input popup__input_field_name"
-                    placeholder="Name"
-            />
+    <!-- modal popup, edit form for profile name and title -->
+    <div class="popup popup_edit_profile">
+      <div class="popup__container">
+        <form
+          action="#"
+          class="popup__form"
+          id="edit_profile_form"
+          name="profile"
+        >
+          <button type="button" class="button popup__close-button"></button>
+          <h2 class="popup__title">Edit profile</h2>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="popup__input popup__input_field_name"
+            placeholder="Name"
+          />
 
-            <input
-                    type="text"
-                    name="occupation"
-                    id="occupation"
-                    class="popup__input popup__input_field_occupation"
-                    placeholder="About me"
-            />
-            <button type="submit" class="button popup__save-button">Save</button>
+          <input
+            type="text"
+            name="occupation"
+            id="occupation"
+            class="popup__input popup__input_field_occupation"
+            placeholder="About me"
+          />
+          <button type="submit" class="button popup__save-button">Save</button>
         </form>
+      </div>
     </div>
-</div>
 
-<!-- modal popup, edit form for adding new place -->
-<div class="popup popup_add_card">
-    <div class="popup__container">
+    <!-- modal popup, edit form for adding new place -->
+    <div class="popup popup_add_card">
+      <div class="popup__container">
         <form action="#" class="popup__form" id="create_card_form" name="card">
-            <button type="button" class="button popup__close-button" id="create_card__close_button"></button>
-            <h2 class="popup__title">New place</h2>
-            <input
-                    type="text"
-                    name="title"
-                    id="title"
-                    class="popup__input popup__input_field_title"
-                    placeholder="Title"
-            />
+          <button
+            type="button"
+            class="button popup__close-button"
+            id="create_card__close_button"
+          ></button>
+          <h2 class="popup__title">New place</h2>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="popup__input popup__input_field_title"
+            placeholder="Title"
+          />
 
-            <input
-                    type="text"
-                    name="image-link"
-                    id="image-link"
-                    class="popup__input popup__input_field_image-link"
-                    placeholder="Image link"
-            />
-            <button type="submit" class="button popup__save-button">Create</button>
+          <input
+            type="text"
+            name="image-link"
+            id="image-link"
+            class="popup__input popup__input_field_image-link"
+            placeholder="Image link"
+          />
+          <button type="submit" class="button popup__save-button">
+            Create
+          </button>
         </form>
+      </div>
     </div>
-</div>
 
-<!-- modal popup, image preview -->
-<div class="popup" id="image-popup">
-    <div class="popup__container popup__container_image">
+    <!-- modal popup, image preview -->
+    <div class="popup" id="image-popup">
+      <div class="popup__container popup__container_image">
         <div class="popup__preview" id="image-popup_img"></div>
         <p class="popup__caption" id="caption"></p>
-        <button type="button" class="button popup__close-button" id="img__close_button"></button>
+        <button
+          type="button"
+          class="button popup__close-button"
+          id="img__close_button"
+        ></button>
+      </div>
     </div>
-</div>
 
-<!-- template for image card gallery -->
-<template id="card-template">
-    <li class="places__item">
+    <!-- template for image card gallery -->
+    <template id="card-template">
+      <li class="places__item">
         <div>
-            <button type="button" class="button places__delete-button"></button>
-            <div
-                    class="places__image"
-            ></div>
-            <div class="places__description">
-                <h2 class="places__title"></h2>
-                <button type="button" class="button places__like-button"></button>
-            </div>
+          <button type="button" class="button places__delete-button"></button>
+          <div class="places__image"></div>
+          <div class="places__description">
+            <h2 class="places__title"></h2>
+            <button type="button" class="button places__like-button"></button>
+          </div>
         </div>
-    </li>
-</template>
+      </li>
+    </template>
 
-<!-- javascript files-->
-<script src="./scripts/data.js"></script>
-<script src="./scripts/script.js"></script>
-</body>
+    <!-- javascript files-->
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
