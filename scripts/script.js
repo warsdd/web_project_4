@@ -26,7 +26,6 @@ const occupationInput = editFormEl.querySelector("#occupation");
 
 const imageTitleInput = addCardForm.querySelector("#title");
 const imageLinkInput = addCardForm.querySelector("#image-link");
-// the above should be queried as addCardForm but this returns null, investigate
 
 const name = document.querySelector(".profile__name");
 const occupation = document.querySelector(".profile__description");
